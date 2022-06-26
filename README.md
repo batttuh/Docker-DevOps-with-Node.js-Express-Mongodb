@@ -26,7 +26,7 @@
 
 ### Container Connection
 - <h3>For mysql</h3>
-  - docker run --name mysql-server -p OUTSIDE_PORT:INSIDE_POST -e(environment var) MYSQL_ROOT_PASSWORD=<PASSWORD> -d mysql
+  - docker run --name mysql-server -p OUTSIDE_PORT:INSIDE_POST -e(environment var) MYSQL_ROOT_PASSWORD=(PASSWORD) -d mysql
 - <h3>For phpmyadmin</h3>
   - docker run --name pmyadmin -p OUTSIDE_PORT:INSIDE_POST <b>--link<b> mysql-server:db phpmyadmin/phpmyadmin
 
