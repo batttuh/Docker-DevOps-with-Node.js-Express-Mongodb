@@ -27,7 +27,7 @@
 - docker network ls : network lists
 - docker network rm (name/id) : network remove
 - docker build . : building docker file
-- docker build . -t (namingImage): naming image
+- docker build . -t (namingImage): naming image and building docker file
 ### Container Connection
 - <h3>For mysql</h3>
   - docker run --name mysql-server -p OUTSIDE_PORT:INSIDE_POST -e(environment var) MYSQL_ROOT_PASSWORD=(PASSWORD) -d mysql
