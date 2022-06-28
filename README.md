@@ -23,7 +23,11 @@
 - docker attach (container id) : up the container which is depatched
 - docker container logs (container id) : show us container logs
 - docker inspect (container id) : show us everything about container
-
+- docker rmi (imageName) : removes image
+- docker network ls : network lists
+- docker network rm (name/id) : network remove
+- docker build . : building docker file
+- docker build . -t (namingImage): naming image
 ### Container Connection
 - <h3>For mysql</h3>
   - docker run --name mysql-server -p OUTSIDE_PORT:INSIDE_POST -e(environment var) MYSQL_ROOT_PASSWORD=(PASSWORD) -d mysql
@@ -42,3 +46,11 @@
 - Docker Engine hold it and if we stop the container all of the information can stay in Docker Host
 - docker run -v /opt/data:/data/db (container name)
 - docker run -v /opt/data:/data/db -p OUTSIDE_PORT:INSIDE_PORT (container name)
+### Docker Network Types
+- (Default) Bridge : Container links in gateway
+- docker run (imageName) --network=none : We can not access at outside
+- Host : docker run (imageName) --network=host : host has a ip we can access şn docker host
+-  User Defined: docker network create --driver bridge subnet ..... --gateway ... (Name)
+- docker run --name (imageNme) --net (networkName) -d (image) for database
+- docker run --net (networkName) -p OUTSIDE_PORT:INSIDE_POST (imageName)
+### Docker Compose
