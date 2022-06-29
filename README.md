@@ -29,6 +29,9 @@
 - docker build . : building docker file
 - docker build . -t (namingImage): naming image and building docker file
 - docker container prune: deletes all of the containers
+- docker-compose build: docker compose building
+- docker-compose up: we can up our server and application with compose
+- docker compose down : we can down the app
 ### Container Connection
 - <h3>For mysql</h3>
   - docker run --name mysql-server -p OUTSIDE_PORT:INSIDE_POST -e(environment var) MYSQL_ROOT_PASSWORD=(PASSWORD) -d mysql
@@ -55,3 +58,10 @@
 - docker run --name (imageNme) --net (networkName) -d (image) for database
 - docker run --net (networkName) -p OUTSIDE_PORT:INSIDE_POST (imageName)
 ### Docker Compose
+- we can up all of the container ,which is server for main application, with Docker Compose
+- docker-compose.yml : it is like xml, json for using data transfer
+- key : value
+- first we need to define version:
+- then we can define services:
+- For Volume Mapping we use volumes:
+- For depending database or other service depends_on:
